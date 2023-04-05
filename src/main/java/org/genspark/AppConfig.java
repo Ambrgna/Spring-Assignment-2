@@ -1,13 +1,12 @@
-package org.genspark.configuration;
+package org.genspark;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//@Configuration
+@Configuration
 //@ComponentScan(basePackages = "org.genspark.configuration")
 public class AppConfig {
 
@@ -25,7 +24,7 @@ public class AppConfig {
     @Bean
     public Address getAddress(){
         Address address = new Address(
-                "New York City", "New York", "USA", "12345"
+                "Kansas City", "Missouri", "USA", "56789"
         );
         return address;
     }

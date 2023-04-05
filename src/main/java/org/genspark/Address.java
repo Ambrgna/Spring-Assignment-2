@@ -1,9 +1,8 @@
-package org.genspark.annotations;
+package org.genspark;
 
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class Address {
     private String city;
     private String state;

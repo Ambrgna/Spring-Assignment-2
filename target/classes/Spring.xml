@@ -5,19 +5,20 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
 
-    <bean id="student" class="org.genspark.xml.Student">
+    <context:component-scan base-package="org.genspark.annotations"/>
+
+    <bean id="student" class="org.genspark.Student">
         <constructor-arg index="0" value="1234"/>
-        <constructor-arg index="1" value="Josh"/>
-        <constructor-arg index="2">
+        <constructor-arg index="1" value="Ann"/>
+        <constructor-arg index="2" >
             <list>
-                <value>1112223333</value>
-                <value>4445556666</value>
-                <value>7778889999</value>
+                <value>7772223333</value>
+                <value>1115559999</value>
+                <value>444888666</value>
             </list>
         </constructor-arg>
-        <constructor-arg index="3" ref="address"/>
     </bean>
-    <bean id="address" class="org.genspark.xml.Address">
+    <bean id="address" class="org.genspark.Address">
         <constructor-arg index="0" value="New York City"/>
         <constructor-arg index="1" value="New York"/>
         <constructor-arg index="2" value="USA"/>
